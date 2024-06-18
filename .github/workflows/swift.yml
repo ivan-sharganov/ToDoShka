@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Build project
       run:
-          xcodebuild build -workspace ToDoShka.xcworkspace -scheme ToDoShka clean build -sdk iphonesimulator CODE_SIGNING_ALLOWED=No
+          xcodebuild build -project ToDoShka.xcodeproj -scheme ToDoShka clean build -sdk iphonesimulator CODE_SIGNING_ALLOWED=No
 #      xcodebuild -workspace ToDoShka.xcworkspace -scheme ToDoShka -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' build
 
     # - name: Build
