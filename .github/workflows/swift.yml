@@ -15,6 +15,7 @@ jobs:
     runs-on: macos-latest
     
     steps:
+    - uses: actions/checkout@v3
     - name: Build project
       run:
           xcodebuild build -project ToDoShka.xcodeproj -scheme ToDoShka clean build -sdk iphonesimulator CODE_SIGNING_ALLOWED=No
