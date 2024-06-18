@@ -11,7 +11,20 @@
 		1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B303D792C20F71300E145CB /* ContentView.swift */; };
 		1B303D7C2C20F71500E145CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B303D7B2C20F71500E145CB /* Assets.xcassets */; };
 		1B303D7F2C20F71500E145CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B303D7E2C20F71500E145CB /* Preview Assets.xcassets */; };
+		1BB6B4D52C2204260020309D /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4D42C2204260020309D /* TodoItem.swift */; };
+		1BB6B4D72C22043E0020309D /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4D62C22043E0020309D /* FileCache.swift */; };
+		1BB6B4E12C238E410020309D /* ToDoShkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4E02C238E410020309D /* ToDoShkaTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BB6B4E22C238E410020309D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B303D6C2C20F71300E145CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B303D732C20F71300E145CB;
+			remoteInfo = ToDoShka;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B303D742C20F71300E145CB /* ToDoShka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoShka.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +32,21 @@
 		1B303D792C20F71300E145CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B303D7B2C20F71500E145CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B303D7E2C20F71500E145CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1BB6B4D42C2204260020309D /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		1BB6B4D62C22043E0020309D /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
+		1BB6B4DE2C238E410020309D /* ToDoShkaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoShkaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB6B4E02C238E410020309D /* ToDoShkaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoShkaTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B303D712C20F71300E145CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BB6B4DB2C238E410020309D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				1B303D762C20F71300E145CB /* ToDoShka */,
+				1BB6B4DF2C238E410020309D /* ToDoShkaTests */,
 				1B303D752C20F71300E145CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				1B303D742C20F71300E145CB /* ToDoShka.app */,
+				1BB6B4DE2C238E410020309D /* ToDoShkaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				1B303D772C20F71300E145CB /* ToDoShkaApp.swift */,
+				1BB6B4D32C2204120020309D /* Model */,
 				1B303D792C20F71300E145CB /* ContentView.swift */,
 				1B303D7B2C20F71500E145CB /* Assets.xcassets */,
 				1B303D7D2C20F71500E145CB /* Preview Content */,
@@ -65,6 +92,23 @@
 				1B303D7E2C20F71500E145CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1BB6B4D32C2204120020309D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BB6B4D42C2204260020309D /* TodoItem.swift */,
+				1BB6B4D62C22043E0020309D /* FileCache.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BB6B4DF2C238E410020309D /* ToDoShkaTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BB6B4E02C238E410020309D /* ToDoShkaTests.swift */,
+			);
+			path = ToDoShkaTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +131,24 @@
 			productReference = 1B303D742C20F71300E145CB /* ToDoShka.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1BB6B4DD2C238E410020309D /* ToDoShkaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BB6B4E42C238E420020309D /* Build configuration list for PBXNativeTarget "ToDoShkaTests" */;
+			buildPhases = (
+				1BB6B4DA2C238E410020309D /* Sources */,
+				1BB6B4DB2C238E410020309D /* Frameworks */,
+				1BB6B4DC2C238E410020309D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BB6B4E32C238E410020309D /* PBXTargetDependency */,
+			);
+			name = ToDoShkaTests;
+			productName = ToDoShkaTests;
+			productReference = 1BB6B4DE2C238E410020309D /* ToDoShkaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +161,10 @@
 				TargetAttributes = {
 					1B303D732C20F71300E145CB = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					1BB6B4DD2C238E410020309D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 1B303D732C20F71300E145CB;
 					};
 				};
 			};
@@ -116,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				1B303D732C20F71300E145CB /* ToDoShka */,
+				1BB6B4DD2C238E410020309D /* ToDoShkaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +197,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BB6B4DC2C238E410020309D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +212,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */,
+				1BB6B4D52C2204260020309D /* TodoItem.swift in Sources */,
+				1BB6B4D72C22043E0020309D /* FileCache.swift in Sources */,
 				1B303D782C20F71300E145CB /* ToDoShkaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BB6B4DA2C238E410020309D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB6B4E12C238E410020309D /* ToDoShkaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BB6B4E32C238E410020309D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B303D732C20F71300E145CB /* ToDoShka */;
+			targetProxy = 1BB6B4E22C238E410020309D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1B303D802C20F71500E145CB /* Debug */ = {
@@ -322,6 +414,42 @@
 			};
 			name = Release;
 		};
+		1BB6B4E52C238E420020309D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7WLG25YT6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isharganov.ToDoShkaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoShka.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoShka";
+			};
+			name = Debug;
+		};
+		1BB6B4E62C238E420020309D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7WLG25YT6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isharganov.ToDoShkaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoShka.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoShka";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +467,15 @@
 			buildConfigurations = (
 				1B303D832C20F71500E145CB /* Debug */,
 				1B303D842C20F71500E145CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BB6B4E42C238E420020309D /* Build configuration list for PBXNativeTarget "ToDoShkaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BB6B4E52C238E420020309D /* Debug */,
+				1BB6B4E62C238E420020309D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
