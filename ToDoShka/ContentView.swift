@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  ToDoShka
-//
-//  Created by i.sharganov on 18.06.2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
