@@ -1,12 +1,20 @@
 import Foundation
 
 
-struct TodoItem {
+struct TodoItem: Identifiable {
 
     enum Priority: String { // Содержит обязательное поле важность, должно быть enum, может иметь три варианта — «неважная», «обычная» и «важная»
         case low
         case regular
         case high
+
+        var description: String {
+            switch self {
+            case .low: "↓"
+            case .regular: "нет"
+            case .high: "!!"
+            }
+        }
     }
 
     let id: String                        // Содержит уникальный идентификатор id, если не задан пользователем — генерируется (UUID().uuidString)
@@ -16,6 +24,7 @@ struct TodoItem {
     let isDone: Bool                      // Содержит флаг того, что задача сделана
     let creationDate: Date                // Содержит две даты — дата создания задачи (обязательна) и дата изменения (опциональна)
     let modificationDate: Date?
+    let hexColor: String?
 
 
     init(
@@ -25,7 +34,8 @@ struct TodoItem {
         deadline: Date? = nil,
         isDone: Bool = false,
         creationDate: Date = Date(),
-        modificationDate: Date? = nil
+        modificationDate: Date? = nil,
+        hexColor: String? = nil
     ) {
 
         self.id = id
@@ -35,6 +45,7 @@ struct TodoItem {
         self.isDone = isDone
         self.creationDate = creationDate
         self.modificationDate = modificationDate
+        self.hexColor = hexColor
     }
 }
 
@@ -51,6 +62,7 @@ extension TodoItem {
         dict["isDone"] = self.isDone
         dict["creationDate"] = self.creationDate.timeIntervalSince1970
         dict["modificationDate"] = self.modificationDate?.timeIntervalSince1970
+        dict["hexColor"] = self.hexColor
         return dict
     }
 
@@ -69,6 +81,7 @@ extension TodoItem {
         let priority = (dict["priority"] as? String).flatMap(Priority.init(rawValue:)) ?? .regular
         let deadline = (dict["deadline"] as? TimeInterval).flatMap(Date.init(timeIntervalSince1970:))
         let modificationDate = (dict["modificationDate"] as? TimeInterval).flatMap(Date.init(timeIntervalSince1970:))
+        let hexColor = dict["hexColor"] as? String
         let id = dict["id"] as? String
         let item = TodoItem(
             id: id ?? UUID().uuidString,
@@ -77,7 +90,8 @@ extension TodoItem {
             deadline: deadline,
             isDone: isDone,
             creationDate: creationDate,
-            modificationDate: modificationDate
+            modificationDate: modificationDate,
+            hexColor: hexColor
         )
         return item
     }
@@ -91,6 +105,7 @@ extension TodoItem: Equatable {
         lhs.deadline == rhs.deadline &&
         lhs.isDone == rhs.isDone &&
         lhs.creationDate == rhs.creationDate &&
-        lhs.modificationDate == rhs.modificationDate
+        lhs.modificationDate == rhs.modificationDate &&
+        lhs.hexColor == rhs.hexColor
     }
 }

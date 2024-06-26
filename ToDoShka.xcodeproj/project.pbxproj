@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0933A82C2C9B0500271FA5 /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0933A72C2C9B0500271FA5 /* TaskDetail.swift */; };
+		1B09379A2C2DEE3300271FA5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0937992C2DEE3300271FA5 /* Colors.swift */; };
+		1B093BA32C2F409E00271FA5 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B093BA22C2F409E00271FA5 /* TaskList.swift */; };
+		1B093BA62C2F4BE100271FA5 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B093BA52C2F4BE100271FA5 /* ColorPicker.swift */; };
 		1B303D782C20F71300E145CB /* ToDoShkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B303D772C20F71300E145CB /* ToDoShkaApp.swift */; };
 		1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B303D792C20F71300E145CB /* ContentView.swift */; };
 		1B303D7C2C20F71500E145CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B303D7B2C20F71500E145CB /* Assets.xcassets */; };
 		1B303D7F2C20F71500E145CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B303D7E2C20F71500E145CB /* Preview Assets.xcassets */; };
+		1B900F9A2C2B78D4003C57EE /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B900F992C2B78D4003C57EE /* TaskCell.swift */; };
 		1BB6B4D52C2204260020309D /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4D42C2204260020309D /* TodoItem.swift */; };
 		1BB6B4D72C22043E0020309D /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4D62C22043E0020309D /* FileCache.swift */; };
 		1BB6B4E12C238E410020309D /* ToDoShkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4E02C238E410020309D /* ToDoShkaTests.swift */; };
@@ -27,11 +32,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0933A72C2C9B0500271FA5 /* TaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
+		1B0937992C2DEE3300271FA5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1B093BA22C2F409E00271FA5 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		1B093BA52C2F4BE100271FA5 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		1B303D742C20F71300E145CB /* ToDoShka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoShka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B303D772C20F71300E145CB /* ToDoShkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoShkaApp.swift; sourceTree = "<group>"; };
 		1B303D792C20F71300E145CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B303D7B2C20F71500E145CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B303D7E2C20F71500E145CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B900F992C2B78D4003C57EE /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		1BB6B4D42C2204260020309D /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		1BB6B4D62C22043E0020309D /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
 		1BB6B4DE2C238E410020309D /* ToDoShkaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoShkaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +66,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B093B9F2C2F406900271FA5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B303D792C20F71300E145CB /* ContentView.swift */,
+				1B093BA12C2F408E00271FA5 /* MainScreen */,
+				1B093BA02C2F407300271FA5 /* TaskDetail */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1B093BA02C2F407300271FA5 /* TaskDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1B0933A72C2C9B0500271FA5 /* TaskDetail.swift */,
+				1B093BA52C2F4BE100271FA5 /* ColorPicker.swift */,
+			);
+			path = TaskDetail;
+			sourceTree = "<group>";
+		};
+		1B093BA12C2F408E00271FA5 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1B900F992C2B78D4003C57EE /* TaskCell.swift */,
+				1B093BA22C2F409E00271FA5 /* TaskList.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1B093BA42C2F40EB00271FA5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B303D7B2C20F71500E145CB /* Assets.xcassets */,
+				1B0937992C2DEE3300271FA5 /* Colors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1B303D6B2C20F71300E145CB = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +126,8 @@
 			children = (
 				1B303D772C20F71300E145CB /* ToDoShkaApp.swift */,
 				1BB6B4D32C2204120020309D /* Model */,
-				1B303D792C20F71300E145CB /* ContentView.swift */,
-				1B303D7B2C20F71500E145CB /* Assets.xcassets */,
+				1B093BA42C2F40EB00271FA5 /* Resources */,
+				1B093B9F2C2F406900271FA5 /* UI */,
 				1B303D7D2C20F71500E145CB /* Preview Content */,
 			);
 			path = ToDoShka;
@@ -211,10 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B093BA32C2F409E00271FA5 /* TaskList.swift in Sources */,
 				1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */,
 				1BB6B4D52C2204260020309D /* TodoItem.swift in Sources */,
+				1B900F9A2C2B78D4003C57EE /* TaskCell.swift in Sources */,
+				1B09379A2C2DEE3300271FA5 /* Colors.swift in Sources */,
+				1B093BA62C2F4BE100271FA5 /* ColorPicker.swift in Sources */,
 				1BB6B4D72C22043E0020309D /* FileCache.swift in Sources */,
 				1B303D782C20F71300E145CB /* ToDoShkaApp.swift in Sources */,
+				1B0933A82C2C9B0500271FA5 /* TaskDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +474,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T7WLG25YT6;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isharganov.ToDoShkaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +493,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T7WLG25YT6;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isharganov.ToDoShkaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
