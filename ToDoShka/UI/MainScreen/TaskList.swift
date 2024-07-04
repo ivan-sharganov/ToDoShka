@@ -2,22 +2,31 @@ import SwiftUI
 
 struct TaskList: View {
     @State private var selectedTask: TodoItem? = nil
+    @State private var showingDoneTasks = false
     @ObservedObject var cache: FileCache
 
     var body: some View {
         NavigationView {
-            ZStack {
 
-                List($cache.tasks) { $task in
-                    TaskCell(task: $task)
-                        .onTapGesture {
-                            selectedTask = task
+            ZStack {
+                VStack{
+                    DoneFilterView(tasks: $cache.tasks, showingDoneTasks: $showingDoneTasks)
+                    List($cache.tasks) { $task in
+                        if showingDoneTasks == true || !showingDoneTasks && !$task.wrappedValue.isDone {
+                            // клетка показывается
+                            // либо когда можно показать всех и она любая 
+                            // либо когда НЕ показываем сделанную и она НЕ сделана
+                            TaskCell(task: $task)
+                                .onTapGesture {
+                                    selectedTask = task
+                                }
                         }
-                }
-                .scrollContentBackground(.hidden)
-                .background(Color._background)
-                .sheet(item: $selectedTask) { task in
-                    TaskDetailView(task: $cache.tasks[$cache.tasks.firstIndex(where: { $0.id == task.id })!])
+                    }
+                    .scrollContentBackground(.hidden)
+                    .background(Color._background)
+                    .sheet(item: $selectedTask) { task in
+                        TaskDetailView(task: $cache.tasks[$cache.tasks.firstIndex(where: { $0.id == task.id })!])
+                    }
                 }
                 VStack {
                     Spacer()
@@ -43,7 +52,8 @@ struct TaskList: View {
                 }
 
             }
-            .navigationTitle("Tasks")
+            .navigationTitle("Мои дела")
+            .background(Color._background)
         }
 
     }

@@ -26,12 +26,12 @@ struct TaskCell: View {
                 Image(systemName: task.isDone ? "checkmark.circle.fill" : "circle")
                     .resizable()
                     .frame(width: 24, height: 24)
-                    .foregroundColor(task.isDone ? .green : .gray)
+                    .foregroundColor(task.isDone ? .green : task.priority == .high ? .red : .gray)
             }
             .buttonStyle(BorderlessButtonStyle())
 
             Spacer().frame(maxWidth: 10)
-            Text(task.text)
+            Text((task.priority == .high ? "‼️" : "") + task.text)
                 .font(.system(size: 17))
             Spacer()
             if let hex = task.hexColor {

@@ -11,6 +11,7 @@
 		1B09379A2C2DEE3300271FA5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0937992C2DEE3300271FA5 /* Colors.swift */; };
 		1B093BA32C2F409E00271FA5 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B093BA22C2F409E00271FA5 /* TaskList.swift */; };
 		1B093BA62C2F4BE100271FA5 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B093BA52C2F4BE100271FA5 /* ColorPicker.swift */; };
+		1B093FE82C37239600271FA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B093FE72C37239600271FA5 /* MainView.swift */; };
 		1B303D782C20F71300E145CB /* ToDoShkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B303D772C20F71300E145CB /* ToDoShkaApp.swift */; };
 		1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B303D792C20F71300E145CB /* ContentView.swift */; };
 		1B303D7C2C20F71500E145CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B303D7B2C20F71500E145CB /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		1B0937992C2DEE3300271FA5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1B093BA22C2F409E00271FA5 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		1B093BA52C2F4BE100271FA5 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		1B093FE72C37239600271FA5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1B303D742C20F71300E145CB /* ToDoShka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoShka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B303D772C20F71300E145CB /* ToDoShkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoShkaApp.swift; sourceTree = "<group>"; };
 		1B303D792C20F71300E145CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				1B900F992C2B78D4003C57EE /* TaskCell.swift */,
 				1B093BA22C2F409E00271FA5 /* TaskList.swift */,
+				1B093FE72C37239600271FA5 /* MainView.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				1B093BA32C2F409E00271FA5 /* TaskList.swift in Sources */,
 				1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */,
 				1BB6B4D52C2204260020309D /* TodoItem.swift in Sources */,
+				1B093FE82C37239600271FA5 /* MainView.swift in Sources */,
 				1B900F9A2C2B78D4003C57EE /* TaskCell.swift in Sources */,
 				1B09379A2C2DEE3300271FA5 /* Colors.swift in Sources */,
 				1B093BA62C2F4BE100271FA5 /* ColorPicker.swift in Sources */,
@@ -474,7 +478,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T7WLG25YT6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isharganov.ToDoShkaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,7 +497,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T7WLG25YT6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.isharganov.ToDoShkaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

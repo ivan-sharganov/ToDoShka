@@ -6,6 +6,7 @@ struct TaskDetailView: View {
     @State private var deadline: Date?
     @State private var priority: TodoItem.Priority
     @State private var showingDatePicker = false
+    @State private var isEmptyTextfield = true
     @State private var selectedColor: Color
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
@@ -31,6 +32,12 @@ struct TaskDetailView: View {
                         .background(Color._field)
                         .cornerRadius(16)
                         .padding(.horizontal)
+                        .onAppear() {
+                            isEmptyTextfield = text.isEmpty
+                        }
+                        .onChange(of: text) {
+                            isEmptyTextfield = text.isEmpty
+                        }
                     VStack {
                         Spacer()
                         PrioritySection(priority: $priority)
@@ -95,6 +102,7 @@ struct TaskDetailView: View {
                     let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("TodoCache.json")
                     try? FileCache.shared.saveTasks(url: url)
                 }
+                    .disabled(isEmptyTextfield)
             )
             .background(Color._background)
         }
