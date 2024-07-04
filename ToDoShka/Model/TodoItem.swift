@@ -15,6 +15,14 @@ struct TodoItem: Identifiable {
             case .high: "!!"
             }
         }
+
+        var intValue: Int {
+            switch self {
+            case .low: 0
+            case .regular: 1
+            case .high: 2
+            }
+        }
     }
 
     let id: String                        // Содержит уникальный идентификатор id, если не задан пользователем — генерируется (UUID().uuidString)
@@ -94,6 +102,31 @@ extension TodoItem {
             hexColor: hexColor
         )
         return item
+    }
+
+    func withToggledIsDone() -> TodoItem {
+        return TodoItem(
+            id: self.id,
+            text: self.text,
+            priority: self.priority,
+            deadline: self.deadline,
+            isDone: !self.isDone,
+            creationDate: self.creationDate,
+            modificationDate: self.modificationDate,
+            hexColor: self.hexColor
+        )
+    }
+    func withIsDone(_ isDone: Bool) -> TodoItem {
+        return TodoItem(
+            id: self.id,
+            text: self.text,
+            priority: self.priority,
+            deadline: self.deadline,
+            isDone: isDone,
+            creationDate: self.creationDate,
+            modificationDate: self.modificationDate,
+            hexColor: self.hexColor
+        )
     }
 }
 
