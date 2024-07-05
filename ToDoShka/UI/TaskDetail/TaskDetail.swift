@@ -21,7 +21,7 @@ struct TaskDetailView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
 
@@ -92,6 +92,7 @@ struct TaskDetailView: View {
                 }
             }
             .navigationTitle("Дело")
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading: Button("Отменить") {
                     presentationMode.wrappedValue.dismiss()
@@ -106,7 +107,7 @@ struct TaskDetailView: View {
             )
             .background(Color._background)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+
     }
 }
 

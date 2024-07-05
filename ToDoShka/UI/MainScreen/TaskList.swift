@@ -2,12 +2,11 @@ import SwiftUI
 
 struct TaskList: View {
     @State private var selectedTask: TodoItem? = nil
-    @State private var showingDoneTasks = false
+    @State private var showingDoneTasks = true
     @ObservedObject var cache: FileCache
 
     var body: some View {
-        NavigationView {
-
+        NavigationStack {
             ZStack {
                 VStack{
                     DoneFilterView(tasks: $cache.tasks, showingDoneTasks: $showingDoneTasks)
@@ -54,7 +53,44 @@ struct TaskList: View {
             }
             .navigationTitle("Мои дела")
             .background(Color._background)
-        }
+            .navigationBarItems(
+                trailing: NavigationLink {
+                    PortableView(tasks: $cache.tasks)
+                } label: {
+                    Image(systemName: "calendar")
+                }
 
+
+            )
+            .background(Color._background)
+        }
+    }
+}
+
+struct DetailView: View {
+    var body: some View {
+        Text("Hello")
+    }
+}
+
+struct DoneFilterView: View {
+    @Binding var tasks: [TodoItem]
+    @Binding var showingDoneTasks: Bool
+    var body: some View {
+        HStack {
+            Label(
+                title: { Text("Выполнено — \(tasks.filter({ $0.isDone }).count)")
+                            .font(.system(size: 15))
+                            .foregroundStyle(Color._labelTertiary) },
+                icon: { }
+            )
+            Spacer()
+            Button(action: {
+                showingDoneTasks.toggle()
+            }, label: {
+                Text("Показать")
+                    .font(.system(size: 15, weight: .bold))
+            })
+        }.padding(.horizontal)
     }
 }
