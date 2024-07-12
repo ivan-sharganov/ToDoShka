@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,14 +12,20 @@
 		1B093BA32C2F409E00271FA5 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B093BA22C2F409E00271FA5 /* TaskList.swift */; };
 		1B093BA62C2F4BE100271FA5 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B093BA52C2F4BE100271FA5 /* ColorPicker.swift */; };
 		1B1D3B8D2C373F760061D58B /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1D3B8C2C373F760061D58B /* Calendar.swift */; };
+		1B2C2F722C41CE7E000CEA21 /* URLSession+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2C2F712C41CE7E000CEA21 /* URLSession+Async.swift */; };
+		1B2C2F752C41D1A1000CEA21 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2C2F742C41D1A1000CEA21 /* CocoaLumberjack */; };
+		1B2C2F772C41D1A1000CEA21 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2C2F762C41D1A1000CEA21 /* CocoaLumberjackSwift */; };
+		1B2C2F792C41D1A1000CEA21 /* CocoaLumberjackSwiftLogBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2C2F782C41D1A1000CEA21 /* CocoaLumberjackSwiftLogBackend */; };
+		1B2C2F7D2C41E106000CEA21 /* FileCachePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2C2F7C2C41E106000CEA21 /* FileCachePackage */; };
+		1B2C2F7F2C41E197000CEA21 /* FileCachePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B2C2F7E2C41E197000CEA21 /* FileCachePackage */; };
 		1B303D782C20F71300E145CB /* ToDoShkaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B303D772C20F71300E145CB /* ToDoShkaApp.swift */; };
 		1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B303D792C20F71300E145CB /* ContentView.swift */; };
 		1B303D7C2C20F71500E145CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B303D7B2C20F71500E145CB /* Assets.xcassets */; };
 		1B303D7F2C20F71500E145CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B303D7E2C20F71500E145CB /* Preview Assets.xcassets */; };
 		1B900F9A2C2B78D4003C57EE /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B900F992C2B78D4003C57EE /* TaskCell.swift */; };
-		1BB6B4D52C2204260020309D /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4D42C2204260020309D /* TodoItem.swift */; };
-		1BB6B4D72C22043E0020309D /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4D62C22043E0020309D /* FileCache.swift */; };
 		1BB6B4E12C238E410020309D /* ToDoShkaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB6B4E02C238E410020309D /* ToDoShkaTests.swift */; };
+		214FE4F0C976D2048C352EC7 /* Pods_ToDoShka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919BE7776820123138F0B283 /* Pods_ToDoShka.framework */; };
+		23EAAFB03E096C7CE6E3B6DB /* Pods_ToDoShkaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F6C23703D981A5DE34F11 /* Pods_ToDoShkaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,21 +39,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		098F4D3DA6363F1EEDD1CA1D /* Pods-ToDoShkaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoShkaTests.debug.xcconfig"; path = "Target Support Files/Pods-ToDoShkaTests/Pods-ToDoShkaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B0933A72C2C9B0500271FA5 /* TaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
 		1B0937992C2DEE3300271FA5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1B093BA22C2F409E00271FA5 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		1B093BA52C2F4BE100271FA5 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		1B1D3B8C2C373F760061D58B /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		1B2C2F712C41CE7E000CEA21 /* URLSession+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Async.swift"; sourceTree = "<group>"; };
 		1B303D742C20F71300E145CB /* ToDoShka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoShka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B303D772C20F71300E145CB /* ToDoShkaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoShkaApp.swift; sourceTree = "<group>"; };
 		1B303D792C20F71300E145CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B303D7B2C20F71500E145CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B303D7E2C20F71500E145CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B900F992C2B78D4003C57EE /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
-		1BB6B4D42C2204260020309D /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		1BB6B4D62C22043E0020309D /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
 		1BB6B4DE2C238E410020309D /* ToDoShkaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoShkaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB6B4E02C238E410020309D /* ToDoShkaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoShkaTests.swift; sourceTree = "<group>"; };
+		348A1F05D7619ABF1F9FD11F /* Pods-ToDoShka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoShka.release.xcconfig"; path = "Target Support Files/Pods-ToDoShka/Pods-ToDoShka.release.xcconfig"; sourceTree = "<group>"; };
+		856CBC03AE9D2DE0F31A4D5A /* Pods-ToDoShka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoShka.debug.xcconfig"; path = "Target Support Files/Pods-ToDoShka/Pods-ToDoShka.debug.xcconfig"; sourceTree = "<group>"; };
+		919BE7776820123138F0B283 /* Pods_ToDoShka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoShka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B03F6C23703D981A5DE34F11 /* Pods_ToDoShkaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoShkaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3937E188F66011FFD75B875 /* Pods-ToDoShkaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoShkaTests.release.xcconfig"; path = "Target Support Files/Pods-ToDoShkaTests/Pods-ToDoShkaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2C2F7F2C41E197000CEA21 /* FileCachePackage in Frameworks */,
+				1B2C2F772C41D1A1000CEA21 /* CocoaLumberjackSwift in Frameworks */,
+				1B2C2F792C41D1A1000CEA21 /* CocoaLumberjackSwiftLogBackend in Frameworks */,
+				1B2C2F752C41D1A1000CEA21 /* CocoaLumberjack in Frameworks */,
+				214FE4F0C976D2048C352EC7 /* Pods_ToDoShka.framework in Frameworks */,
+				1B2C2F7D2C41E106000CEA21 /* FileCachePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EAAFB03E096C7CE6E3B6DB /* Pods_ToDoShkaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,12 +132,22 @@
 			path = UIKitCalendar;
 			sourceTree = "<group>";
 		};
+		1B2C2F702C41CE74000CEA21 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1B2C2F712C41CE7E000CEA21 /* URLSession+Async.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		1B303D6B2C20F71300E145CB = {
 			isa = PBXGroup;
 			children = (
 				1B303D762C20F71300E145CB /* ToDoShka */,
 				1BB6B4DF2C238E410020309D /* ToDoShkaTests */,
 				1B303D752C20F71300E145CB /* Products */,
+				CE5EA0CE051C1385094FDC65 /* Pods */,
+				A71D19E2209363C2EF0CAB1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +163,8 @@
 		1B303D762C20F71300E145CB /* ToDoShka */ = {
 			isa = PBXGroup;
 			children = (
+				1B2C2F702C41CE74000CEA21 /* Utils */,
 				1B303D772C20F71300E145CB /* ToDoShkaApp.swift */,
-				1BB6B4D32C2204120020309D /* Model */,
 				1B093BA42C2F40EB00271FA5 /* Resources */,
 				1B093B9F2C2F406900271FA5 /* UI */,
 				1B303D7D2C20F71500E145CB /* Preview Content */,
@@ -152,21 +180,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1BB6B4D32C2204120020309D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1BB6B4D42C2204260020309D /* TodoItem.swift */,
-				1BB6B4D62C22043E0020309D /* FileCache.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		1BB6B4DF2C238E410020309D /* ToDoShkaTests */ = {
 			isa = PBXGroup;
 			children = (
 				1BB6B4E02C238E410020309D /* ToDoShkaTests.swift */,
 			);
 			path = ToDoShkaTests;
+			sourceTree = "<group>";
+		};
+		A71D19E2209363C2EF0CAB1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				919BE7776820123138F0B283 /* Pods_ToDoShka.framework */,
+				B03F6C23703D981A5DE34F11 /* Pods_ToDoShkaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE5EA0CE051C1385094FDC65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				856CBC03AE9D2DE0F31A4D5A /* Pods-ToDoShka.debug.xcconfig */,
+				348A1F05D7619ABF1F9FD11F /* Pods-ToDoShka.release.xcconfig */,
+				098F4D3DA6363F1EEDD1CA1D /* Pods-ToDoShkaTests.debug.xcconfig */,
+				C3937E188F66011FFD75B875 /* Pods-ToDoShkaTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +215,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B303D822C20F71500E145CB /* Build configuration list for PBXNativeTarget "ToDoShka" */;
 			buildPhases = (
+				272BB2A7474F428DEFE70643 /* [CP] Check Pods Manifest.lock */,
+				1B2C2F7A2C41D2F9000CEA21 /* ShellScript */,
 				1B303D702C20F71300E145CB /* Sources */,
 				1B303D712C20F71300E145CB /* Frameworks */,
 				1B303D722C20F71300E145CB /* Resources */,
@@ -185,6 +226,13 @@
 			dependencies = (
 			);
 			name = ToDoShka;
+			packageProductDependencies = (
+				1B2C2F742C41D1A1000CEA21 /* CocoaLumberjack */,
+				1B2C2F762C41D1A1000CEA21 /* CocoaLumberjackSwift */,
+				1B2C2F782C41D1A1000CEA21 /* CocoaLumberjackSwiftLogBackend */,
+				1B2C2F7C2C41E106000CEA21 /* FileCachePackage */,
+				1B2C2F7E2C41E197000CEA21 /* FileCachePackage */,
+			);
 			productName = ToDoShka;
 			productReference = 1B303D742C20F71300E145CB /* ToDoShka.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BB6B4E42C238E420020309D /* Build configuration list for PBXNativeTarget "ToDoShkaTests" */;
 			buildPhases = (
+				BBA22CEDDF5559B9FBB3DEDC /* [CP] Check Pods Manifest.lock */,
 				1BB6B4DA2C238E410020309D /* Sources */,
 				1BB6B4DB2C238E410020309D /* Frameworks */,
 				1BB6B4DC2C238E410020309D /* Resources */,
@@ -235,6 +284,10 @@
 				Base,
 			);
 			mainGroup = 1B303D6B2C20F71300E145CB;
+			packageReferences = (
+				1B2C2F732C41D1A1000CEA21 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				1B2C2F7B2C41E106000CEA21 /* XCLocalSwiftPackageReference "FileCachePackage/FileCachePackage" */,
+			);
 			productRefGroup = 1B303D752C20F71300E145CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,19 +317,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B2C2F7A2C41D2F9000CEA21 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n# Swiftlint\n\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint lint --strict\nelse\n    echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n    exit 1\nfi\n";
+		};
+		272BB2A7474F428DEFE70643 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDoShka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA22CEDDF5559B9FBB3DEDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDoShkaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B303D702C20F71300E145CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2C2F722C41CE7E000CEA21 /* URLSession+Async.swift in Sources */,
 				1B1D3B8D2C373F760061D58B /* Calendar.swift in Sources */,
 				1B093BA32C2F409E00271FA5 /* TaskList.swift in Sources */,
 				1B303D7A2C20F71300E145CB /* ContentView.swift in Sources */,
-				1BB6B4D52C2204260020309D /* TodoItem.swift in Sources */,
 				1B900F9A2C2B78D4003C57EE /* TaskCell.swift in Sources */,
 				1B09379A2C2DEE3300271FA5 /* Colors.swift in Sources */,
 				1B093BA62C2F4BE100271FA5 /* ColorPicker.swift in Sources */,
-				1BB6B4D72C22043E0020309D /* FileCache.swift in Sources */,
 				1B303D782C20F71300E145CB /* ToDoShkaApp.swift in Sources */,
 				1B0933A82C2C9B0500271FA5 /* TaskDetail.swift in Sources */,
 			);
@@ -422,6 +538,7 @@
 		};
 		1B303D832C20F71500E145CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856CBC03AE9D2DE0F31A4D5A /* Pods-ToDoShka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,12 +547,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoShka/Preview Content\"";
 				DEVELOPMENT_TEAM = T7WLG25YT6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +570,7 @@
 		};
 		1B303D842C20F71500E145CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 348A1F05D7619ABF1F9FD11F /* Pods-ToDoShka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,12 +579,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoShka/Preview Content\"";
 				DEVELOPMENT_TEAM = T7WLG25YT6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,6 +602,7 @@
 		};
 		1BB6B4E52C238E420020309D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 098F4D3DA6363F1EEDD1CA1D /* Pods-ToDoShkaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +622,7 @@
 		};
 		1BB6B4E62C238E420020309D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3937E188F66011FFD75B875 /* Pods-ToDoShkaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +671,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1B2C2F7B2C41E106000CEA21 /* XCLocalSwiftPackageReference "FileCachePackage/FileCachePackage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = FileCachePackage/FileCachePackage;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B2C2F732C41D1A1000CEA21 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B2C2F742C41D1A1000CEA21 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B2C2F732C41D1A1000CEA21 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		1B2C2F762C41D1A1000CEA21 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B2C2F732C41D1A1000CEA21 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		1B2C2F782C41D1A1000CEA21 /* CocoaLumberjackSwiftLogBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B2C2F732C41D1A1000CEA21 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwiftLogBackend;
+		};
+		1B2C2F7C2C41E106000CEA21 /* FileCachePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FileCachePackage;
+		};
+		1B2C2F7E2C41E197000CEA21 /* FileCachePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FileCachePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B303D6C2C20F71300E145CB /* Project object */;
 }

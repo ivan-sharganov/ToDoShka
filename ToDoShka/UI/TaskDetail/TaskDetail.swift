@@ -1,4 +1,6 @@
 import SwiftUI
+import CocoaLumberjackSwift
+import FileCachePackage
 
 struct TaskDetailView: View {
     @Binding var task: TodoItem
@@ -32,7 +34,8 @@ struct TaskDetailView: View {
                         .background(Color._field)
                         .cornerRadius(16)
                         .padding(.horizontal)
-                        .onAppear() {
+                        .onAppear {
+                            DDLogDebug("TaskDetail screen opened")
                             isEmptyTextfield = text.isEmpty
                         }
                         .onChange(of: text) {
@@ -54,8 +57,8 @@ struct TaskDetailView: View {
                         Spacer()
                         ColorPickerView(selectedColor: $selectedColor).frame(height: 48)
                         Spacer()
-                        if let safeDeadline = $deadline.wrappedValue ,
-                           showingDatePicker  {
+                        if let safeDeadline = $deadline.wrappedValue,
+                           showingDatePicker {
                             DatePicker(
                                 "",
                                 selection: Binding(
@@ -111,7 +114,6 @@ struct TaskDetailView: View {
     }
 }
 
-
 struct PrioritySection: View {
     @Binding var priority: TodoItem.Priority
     var body: some View {
@@ -133,7 +135,6 @@ struct PrioritySection: View {
     }
 
 }
-
 
 struct DeadlineSection: View {
     @Binding var deadline: Date?
@@ -182,4 +183,3 @@ extension View {
 #Preview {
     ContentView()
 }
-

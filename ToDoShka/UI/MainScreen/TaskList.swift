@@ -1,14 +1,16 @@
 import SwiftUI
+import CocoaLumberjackSwift
+import FileCachePackage
 
 struct TaskList: View {
-    @State private var selectedTask: TodoItem? = nil
+    @State private var selectedTask: TodoItem?
     @State private var showingDoneTasks = true
     @ObservedObject var cache: FileCache
 
     var body: some View {
         NavigationStack {
             ZStack {
-                VStack{
+                VStack {
                     DoneFilterView(tasks: $cache.tasks, showingDoneTasks: $showingDoneTasks)
                     List($cache.tasks) { $task in
                         if showingDoneTasks == true || !showingDoneTasks && !$task.wrappedValue.isDone {
@@ -31,6 +33,7 @@ struct TaskList: View {
                     Spacer()
                     Button(action: {
                         let task = TodoItem(text: "")
+                        DDLogDebug("Created new task")
                         FileCache.shared.add(task: task)
                         selectedTask = task
                     }, label: {
@@ -59,7 +62,6 @@ struct TaskList: View {
                 } label: {
                     Image(systemName: "calendar")
                 }
-
 
             )
             .background(Color._background)

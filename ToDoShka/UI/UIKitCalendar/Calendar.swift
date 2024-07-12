@@ -1,8 +1,9 @@
 import SwiftUI
 import UIKit
+import CocoaLumberjackSwift
+import FileCachePackage
 
 class MyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
-
 
     private enum Constants {
         static let sizeOfCalendarCell: CGFloat = 70
@@ -38,6 +39,10 @@ class MyViewController: UIViewController, UITableViewDataSource, UITableViewDele
             array += value
         }
         return array.sorted { $0.id < $1.id }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        DDLogDebug("UIKitCalendar screen opened")
     }
 
     func groupDataByDeadline() {
@@ -128,9 +133,9 @@ class MyViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let date = sortedSections[indexPath.section]
-        guard let _ = groupedItems[date]?[indexPath.row] else { return nil }
+        guard groupedItems[date]?[indexPath.row] != nil else { return nil }
 
-        let activateAction = UIContextualAction(style: .normal, title: "In progress") { action, view, completionHandler in
+        let activateAction = UIContextualAction(style: .normal, title: "In progress") { _, _, completionHandler in
             self.setDone(false, at: indexPath)
             completionHandler(true)
         }
@@ -140,9 +145,9 @@ class MyViewController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let date = sortedSections[indexPath.section]
-        guard let _ = groupedItems[date]?[indexPath.row] else { return nil }
+        guard groupedItems[date]?[indexPath.row] != nil else { return nil }
 
-        let activateAction = UIContextualAction(style: .normal, title: "Done") { action, view, completionHandler in
+        let activateAction = UIContextualAction(style: .normal, title: "Done") { _, _, completionHandler in
             self.setDone(true, at: indexPath)
             completionHandler(true)
         }
@@ -203,7 +208,7 @@ class MyViewController: UIViewController, UITableViewDataSource, UITableViewDele
             if item.isDone {
                 cell.textLabel?.textColor = .gray
                 let attributeString: NSMutableAttributedString = NSMutableAttributedString(string: item.text)
-                attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+                attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSRange(location: 0, length: attributeString.length))
                 cell.textLabel?.attributedText = attributeString
             } else {
                 cell.textLabel?.textColor = .black
@@ -287,11 +292,10 @@ class MyViewController: UIViewController, UITableViewDataSource, UITableViewDele
 }
 
 //
-//#Preview {
+// #Preview {
 //    ContentView()
-//}
+// }
 //
-
 
 struct PortableView: UIViewControllerRepresentable {
     @Binding var tasks: [TodoItem]
