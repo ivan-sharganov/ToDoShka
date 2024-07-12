@@ -10,5 +10,4 @@ public extension UIColor {
     static let _background = UIColor(named: "background")!
     static let _scrollSelection = UIColor(named: "scrollSelection")!
 
-
 }

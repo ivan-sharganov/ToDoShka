@@ -1,4 +1,5 @@
 import SwiftUI
+import CocoaLumberjackSwift
 
 /// Представление с отображением текущего цвета на экране детаоей задачи
 struct ColorPickerView: View {
@@ -52,6 +53,7 @@ struct ColorPickerScreen: View {
             .padding()
         }
         .onAppear {
+            DDLogDebug("ColorPicker screen opened")
             let uiColor = UIColor(selectedColor)
             var h: CGFloat = 0
             var s: CGFloat = 0
@@ -171,7 +173,6 @@ struct ColorPalette: View {
         }
     }
 }
-
 
 extension Color {
     init(hex: String) {

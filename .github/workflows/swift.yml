@@ -11,11 +11,22 @@ on:
 
 jobs:
   build:
-  
     runs-on: macos-latest
     
     steps:
+
+    - name: Patch Xcode 15.3
+      uses: 2sem/patch-package-resolved@v1
+
     - uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: |
+        brew install swiftlint
+        brew update
+        pod install
+
+
     - name: Build project
       run:
           xcodebuild build -project ToDoShka.xcodeproj -scheme ToDoShka clean build -sdk iphonesimulator CODE_SIGNING_ALLOWED=No

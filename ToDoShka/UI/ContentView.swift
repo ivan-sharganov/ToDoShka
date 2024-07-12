@@ -1,4 +1,5 @@
 import SwiftUI
+import FileCachePackage
 
 struct ContentView: View {
     @StateObject var cache = FileCache.shared
