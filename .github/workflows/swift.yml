@@ -11,11 +11,17 @@ on:
 
 jobs:
   build:
-  
     runs-on: macos-latest
     
     steps:
     - uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: |
+        brew install swiftlint
+        pod install
+    
+
     - name: Build project
       run:
           xcodebuild build -project ToDoShka.xcodeproj -scheme ToDoShka clean build -sdk iphonesimulator CODE_SIGNING_ALLOWED=No
